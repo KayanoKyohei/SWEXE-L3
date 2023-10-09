@@ -25,4 +25,8 @@ production:
   adapter : postgresql
   encoding: unicode
   pool: 5
+  database: test_render_w8g4
+  username: test_render_w8g4_user
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   #database: db/production.sqlite3
