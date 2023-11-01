@@ -13,3 +13,100 @@
  *= require_tree .
  *= require_self
  */
+ 
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.column {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#left-column {
+    felx:8;
+    background-color: #f2f2f2;
+}
+
+#right-column {
+    flex:2;
+    background-color: #e0e0e0;
+}
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #efefef;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+.tab-item {
+    display: none;
+}
+
+
+.tab-item+label {
+    flex: 1;
+    order: -1;
+    cursor: pointer;
+    padding: 1rem .5em;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ddd;
+    color: #999;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tab-content {
+    width: 100%;
+    padding: 0 1rem;
+    display: none;
+    overflow: hidden;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.tab-item:checked+label {
+    border-bottom: 3px solid #379beb;
+    color: #379beb;
+    transition: .5s ease-in-out;
+}
+
+.tab-item:checked+label+.tab-content {
+    display: block;
+    padding: 0 1rem;
+    color: #333;
+}
+
+
+ul {
+    position: relative;
+    list-style-type: none;
+    padding: 1rem 1rem 1rem 2.5rem;
+    background-color: #dceff7;
+    box-shadow: 0 0 10px #ccc;
+    color: #45A5CF;
+}
+
+
+ul li {
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+ul li::before {
+    position: absolute;
+    left: 1rem;
+    padding-left: 0.2rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f152';
+}
