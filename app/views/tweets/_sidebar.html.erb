@@ -1,1 +1,76 @@
-サイドバー
+<!DOCTYPE html>
+<style>
+/* styles.css */
+ul {
+    position: relative;
+    list-style-type: none;
+    padding: 1rem 1rem 1rem 2.5rem;
+    background-color: #dceff7;
+    box-shadow: 0 0 10px #ccc;
+    color: #45A5CF;
+}
+
+
+ul li {
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+ul li::before {
+    position: absolute;
+    left: 1rem;
+    padding-left: 0.2rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f152';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column1 {
+    flex: 1; /* 左側のカラムが可変幅になります */
+    background-color: #f2f2f2;
+}
+
+.column2 {
+    flex: 1; /* 右側のカラムが可変幅になります */
+    background-color: #e0e0e0;
+}
+
+
+</style>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2カラムのレイアウト</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column column1">
+            <!-- 左側のカラムのコンテンツ -->
+            <ul>
+                <li>リスト項目1</li>
+                <li>リスト項目2</li>
+                <li>リスト項目3</li>
+                <li>リスト項目4</li>
+            </ul>
+        </div>
+        <div class="column column2">
+            <%= render "footer" %>
+        </div>
+    </div>
+</body>
+</html>
