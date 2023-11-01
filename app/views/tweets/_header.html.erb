@@ -1,1 +1,24 @@
-ヘッダー
+<style>
+h2 {
+    position: relative;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #b2d5de;
+    border: 3px solid #353535;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+h2::before {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    height: 20px;
+    width: 3px;
+    transform: rotate(-20deg);
+    background-color: #333;
+    content: '';
+}
+</style>
+<h2>Twitterアプリ</h2>

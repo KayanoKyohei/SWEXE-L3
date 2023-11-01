@@ -61,13 +61,16 @@ body {
     <div class="container">
         <div class="column column1">
             <!-- 左側のカラムのコンテンツ -->
+            <div id="menu">
             <ul>
-                <li>リスト項目1</li>
-                <li>リスト項目2</li>
-                <li>リスト項目3</li>
-                <li>リスト項目4</li>
-            </ul>
+                <li><%= link_to '新規追加', 'tweets/new' %></li>
+                <li><%= link_to 'ツイート一覧', 'tweets/show' %></li>
+                <li><%= link_to 'メディア', 'tweets/index' %></li>
+            </ul> 
+            </div>
         </div>
+        
+        
         <div class="column column2">
             <%= render "footer" %>
         </div>
